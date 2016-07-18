@@ -1,0 +1,13 @@
+{
+  "name": "postcss-asset-hash",
+  "version": "1.0.0",
+  "description": "postcss-asset-hash plugin",
+  "main": "./distribution/index.js",
+  "scripts": {
+     "build": "babel source --presets babel-preset-es2015 --out-dir distribution",
+     "prepublish": "npm run build",
+     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
