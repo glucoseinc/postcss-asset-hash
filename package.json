@@ -1,6 +1,6 @@
 {
   "name": "postcss-asset-hash",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "postcss-asset-hash plugin",
   "main": "./lib/index.js",
   "scripts": {
@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-cli": "^6.10.1"
+    "babel-cli": "^6.10.1",
+    "babel-polyfill": "^6.9.1"
   },
   "dependencies": {
     "object-assign": "^4.1.0"
