@@ -1,5 +1,6 @@
 import crypto from 'crypto';
 import fs from 'fs';
+import objectAssign from 'object-assign';
 import path from 'path';
 import postcss from 'postcss';
 
@@ -9,7 +10,7 @@ let url_pattern_rex = /(url\(\s*['"]?)([^"')]+)(["']?\s*\))/g
 
 class Context {
   constructor(options) {
-    this.options = Object.assign({
+    this.options = objectAssign({
       assets_directories: ['.'],
       hash_length: 8
     }, options || {});
