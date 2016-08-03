@@ -24,6 +24,10 @@ class Context {
         return
 
       decl.value = decl.value.replace(url_pattern_rex, (_, prefix, url, suffix) => {
+        // http urlには対応しない
+        if(url.match(/^https?:\/\//))
+          return `${prefix}${url}${suffix}`;
+
         let filebuf = this.find_file(url);
         if(!filebuf) {
           console.error(`file not found "${url}"`);
