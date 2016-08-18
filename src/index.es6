@@ -30,8 +30,9 @@ class Context {
 
         let filebuf = this.find_file(url);
         if(!filebuf) {
-          console.error(`file not found "${url}"`);
-          throw 'FileNotFound';
+          console.error(`File not found "${url}"`);
+          return `${prefix}${url}${suffix}`;
+          // throw 'FileNotFound';
         }
         let digest = get_file_hash(filebuf).slice(0, this.options.hash_length);
 
